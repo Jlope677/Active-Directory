@@ -1,4 +1,4 @@
-# 🛠️ Active Directory Lab Project  
+# 🛠️ Active Directory
 
 This project demonstrates my ability to **deploy, configure, and manage Active Directory (AD)** in a simulated enterprise environment. The lab was built using **Azure Virtual Machines**, a **Windows Server 2022 Domain Controller (DC-1)**, and a **Windows 10 Client (Client-1)** joined to the domain.  
 
@@ -31,11 +31,29 @@ The lab covers:
 
 # Part 1 – Deploying Active Directory  
 
-### **Step 1 – Create Azure Virtual Machines**  
-- Deployed **DC-1 (Windows Server 2022)** and **Client-1 (Windows 10 Pro)**.  
-- Placed both machines in the same **Virtual Network (VNet)**.  
+### **Step 1 – Create Azure Virtual Machines**    
 
-📸 *Screenshots: VM creation + Resource Group + Networking setup*  
+ **Create a Resource Group**
+<img width="1071" height="930" alt="rg1" src="https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52" />
+
+**Create a Virtual Network and Subnet**
+<img width="1266" height="890" alt="vnet" src="https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723" />
+
+**Create the Domain Controller VM (Windows Server 2022) named “DC-1”**
+
+<img width="1105" height="862" alt="dc-1(1)" src="https://github.com/user-attachments/assets/1f073bf0-edb5-40a1-ab7d-65906a4cf81b" />
+<img width="1339" height="887" alt="dc-1(2)" src="https://github.com/user-attachments/assets/21bb7f0c-d27f-45a8-9f9c-3f6c041e84a7" />
+<img width="1050" height="646" alt="dc-1(3)" src="https://github.com/user-attachments/assets/ef2e1745-3ce9-4e5c-9579-19c5d7bc2c88" />
+<img width="1304" height="945" alt="dc-1(4)" src="https://github.com/user-attachments/assets/1320a6df-810c-4cad-ab58-4fa1200fecca" />
+
+
+
+
+
+
+
+
+ 
 
 ---
 
@@ -181,17 +199,5 @@ for ($i=0; $i -lt $NUMBER_OF_ACCOUNTS_TO_CREATE; $i++) {
 
 ---
 
-## 📸 Screenshots Folder  
-Screenshots are provided for every major step in the lab. For GitHub:  
-
-```markdown
-![Disable Account](images/disable_account.PNG)  
-![Account Lockout](images/account_lockout.PNG)  
-![Unlock Account](images/unlock_account.PNG)  
-![Reset Password](images/reset_password.PNG)  
-![Group Policy Lockout](images/group_policy.PNG)  
-```
-
----
 
 ✅ This project demonstrates **end-to-end Active Directory administration**: deployment, user management, account security, and Group Policy configuration. It reflects **core skills of a System Administrator** in real enterprise environments.  
