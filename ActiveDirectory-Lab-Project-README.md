@@ -31,12 +31,12 @@ The lab covers:
 
 # Part 1 – Deploying Active Directory  
 
-### **Step 1 – Create Azure Virtual Machines**    
+## **Step 1 – Create Azure Virtual Machines**    
 
- **Create a Resource Group**
+### **Create a Resource Group**
 ![Resource Group](https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52)
 
-**Create a Virtual Network and Subnet**
+### **Create a Virtual Network and Subnet**
 ![Virtual Network](https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723)
 
 **Create the Domain Controller VM (Windows Server 2022) named “DC-1”**
