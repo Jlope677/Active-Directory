@@ -37,7 +37,7 @@ The lab covers:
 ![Resource Group](https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52)
 
 **Create a Virtual Network and Subnet**
-<img width="1266" height="890" alt="vnet" src="https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723" />
+![Virtual Network](https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723)
 
 **Create the Domain Controller VM (Windows Server 2022) named “DC-1”**
 
