@@ -34,7 +34,7 @@ The lab covers:
 ### **Step 1 – Create Azure Virtual Machines**    
 
  **Create a Resource Group**
-<img width="1071" height="930" alt="rg1" src="https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52" />
+![Resource Group](https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52)
 
 **Create a Virtual Network and Subnet**
 <img width="1266" height="890" alt="vnet" src="https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723" />
@@ -45,6 +45,10 @@ The lab covers:
 <img width="1339" height="887" alt="dc-1(2)" src="https://github.com/user-attachments/assets/21bb7f0c-d27f-45a8-9f9c-3f6c041e84a7" />
 <img width="1050" height="646" alt="dc-1(3)" src="https://github.com/user-attachments/assets/ef2e1745-3ce9-4e5c-9579-19c5d7bc2c88" />
 <img width="1304" height="945" alt="dc-1(4)" src="https://github.com/user-attachments/assets/1320a6df-810c-4cad-ab58-4fa1200fecca" />
+
+Username: labuser
+Password: Cyberlab123!
+
 
 
 
