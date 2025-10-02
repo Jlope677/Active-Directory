@@ -39,15 +39,20 @@ The lab covers:
 ### **Create a Virtual Network and Subnet**
 ![Virtual Network](https://github.com/user-attachments/assets/075b0eb4-89b5-44c9-8041-45f44d12f723)
 
-**Create the Domain Controller VM (Windows Server 2022) named “DC-1”**
+### **Create the Domain Controller VM (Windows Server 2022) – `DC-1`**
 
-<img width="1105" height="862" alt="dc-1(1)" src="https://github.com/user-attachments/assets/1f073bf0-edb5-40a1-ab7d-65906a4cf81b" />
-<img width="1339" height="887" alt="dc-1(2)" src="https://github.com/user-attachments/assets/21bb7f0c-d27f-45a8-9f9c-3f6c041e84a7" />
-<img width="1050" height="646" alt="dc-1(3)" src="https://github.com/user-attachments/assets/ef2e1745-3ce9-4e5c-9579-19c5d7bc2c88" />
-<img width="1304" height="945" alt="dc-1(4)" src="https://github.com/user-attachments/assets/1320a6df-810c-4cad-ab58-4fa1200fecca" />
+- **VM Name:** `DC-1`  
+- **Operating System:** Windows Server 2022  
+- **Username:** `labuser`  
+- **Password:** `Cyberlab123!`  
 
-Username: labuser
-Password: Cyberlab123!
+| Screenshot | Description |
+|------------|-------------|
+| ![DC-1 Setup 1](https://github.com/user-attachments/assets/1f073bf0-edb5-40a1-ab7d-65906a4cf81b) | VM creation screen – basic settings |
+| ![DC-1 Setup 2](https://github.com/user-attachments/assets/21bb7f0c-d27f-45a8-9f9c-3f6c041e84a7) | VM networking configuration |
+| ![DC-1 Setup 3](https://github.com/user-attachments/assets/ef2e1745-3ce9-4e5c-9579-19c5d7bc2c88) | VM security & credentials |
+| ![DC-1 Setup 4](https://github.com/user-attachments/assets/1320a6df-810c-4cad-ab58-4fa1200fecca) | Final review before deployment |
+
 
 
 
