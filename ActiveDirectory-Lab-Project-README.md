@@ -74,7 +74,6 @@ To ensure stability in the environment, the Domain Controller’s private IP add
 <img width="537" height="596" alt="dc-1 firewall(4)" src="https://github.com/user-attachments/assets/6d6a0d32-bafc-40a7-b468-995f7082ef86" />  
 <img width="525" height="600" alt="dc-1 firewall(5)" src="https://github.com/user-attachments/assets/56af524c-0b19-48f0-8518-e8288abe4a0b" />  
 
----
 
 ### **Create the Client VM (Windows 10) – `Client-1`**
 
@@ -89,7 +88,6 @@ To ensure stability in the environment, the Domain Controller’s private IP add
 <img width="1263" height="774" alt="Client-1(3)" src="https://github.com/user-attachments/assets/a9a229a1-db20-4936-ad22-cbf1c516633d" />  
 <img width="1212" height="833" alt="Client-1(4)" src="https://github.com/user-attachments/assets/0d222a70-0296-4e0b-a963-357742910911" />  
 
----
 
 ### ** Configure Client-1’s DNS Settings to Use DC-1’s Private IP**
 
