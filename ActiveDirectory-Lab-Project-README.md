@@ -31,7 +31,7 @@ The lab covers:
 
 # Part 1 – Deploying Active Directory  
 
-### **Step 1 – Create Azure Virtual Machines**    
+## **Step 1 – Create Azure Virtual Machines**    
 
 ### **Create a Resource Group**
 ![Resource Group](https://github.com/user-attachments/assets/c8e5f6cb-5250-41c1-a3ac-cec1bb3dbf52)
