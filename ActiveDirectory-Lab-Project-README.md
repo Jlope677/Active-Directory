@@ -104,15 +104,15 @@ Once Client-1 is created:
 
 ---
 
-### **Step 2 – Install Active Directory Domain Services (AD DS)**  
-- Installed **AD DS** on DC-1.
+## **Step 2 – Install Active Directory Domain Services (AD DS)**  
+### Installed **AD DS** on DC-1.
   <img width="1512" height="1008" alt="dc-1(add roles and features)" src="https://github.com/user-attachments/assets/eb79881d-44a5-4b32-85f2-2016f1f57ce3" />
   <img width="1059" height="773" alt="dc-1(add roles and features)2" src="https://github.com/user-attachments/assets/5c862e42-dcdd-46dd-bb6d-cfd79b841574" />
   <img width="1010" height="718" alt="dc-1(add roles and features)3" src="https://github.com/user-attachments/assets/b522ccee-bbab-457e-9c4c-e35ea3c6372e" />
   <img width="1071" height="724" alt="dc-1(add roles and features)4" src="https://github.com/user-attachments/assets/8d53c83d-3203-42d0-bb52-1d325cf69c69" />
 
 
-- Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
+### Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
 <img width="1323" height="642" alt="dc-1 promote" src="https://github.com/user-attachments/assets/e11c3317-6629-4768-a455-1ea6c5a9ce4f" />
 <img width="1050" height="796" alt="dc-1 promote2" src="https://github.com/user-attachments/assets/2d401cdd-1476-48d1-8647-1eed16d6003f" />
 <img width="997" height="767" alt="dc-1 promote3(Password1)" src="https://github.com/user-attachments/assets/ef5ecaa5-322a-4f14-85bd-0de6c1260a5d" />
@@ -121,7 +121,7 @@ Once Client-1 is created:
 
 ---
 
-### **Step 3 – Create Organizational Units (OUs)**  
+## **Step 3 – Create Organizational Units (OUs)**  
 - Created OUs: `_ADMINS`, `_CLIENTS`, `_EMPLOYEES`.  
 - These OUs help organize domain objects logically.  
 <img width="1363" height="954" alt="active_directory1" src="https://github.com/user-attachments/assets/78fdcda9-a3bd-4f56-b705-5e7559638b09" />
@@ -133,7 +133,7 @@ Once Client-1 is created:
 
 ---
 
-### **Step 4 – Create a Domain Admin Account**  
+## **Step 4 – Create a Domain Admin Account**  
 - Created `jane_admin` inside `_ADMINS`.  
 - Added to **Domain Admins** group.  
 - Verified login with domain admin credentials.  
@@ -155,19 +155,19 @@ Once Client-1 is created:
  
 
 ---
-### **Step 5 – Join Client-1 to the Domain**  
-- Logged into Client-1 → updated system settings → joined to domain `mydomain.com`.
+## **Step 5 – Join Client-1 to the Domain**  
+### Logged into Client-1 → updated system settings → joined to domain `mydomain.com`.
 <img width="1275" height="1000" alt="clint-1 to domaincontroller1" src="https://github.com/user-attachments/assets/edd3fa14-e9c0-4b60-9758-fa865a57329d" />
 <img width="777" height="627" alt="clint-1 to domaincontroller2" src="https://github.com/user-attachments/assets/c53c55e4-c270-433f-99e5-8401ef9568d6" />
 <img width="1286" height="734" alt="clint-1 to domaincontroller3" src="https://github.com/user-attachments/assets/75a54e14-779a-48a3-a6cc-2e59164148fb" />    
-- Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
+### Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
 <img width="1190" height="916" alt="verify Client-1 shows up in ADUC" src="https://github.com/user-attachments/assets/93fa9b43-9e7f-4021-b0b7-c57fece916ea" />
--drag client-1 into `_CLIENTS`
+### drag client-1 into `_CLIENTS`
 <img width="1024" height="717" alt="drag Client-1" src="https://github.com/user-attachments/assets/5e76ad2d-887c-4302-8d24-d20a66f95575" />
 
 ---
 
-### **Step 6 – Automate Bulk User Creation with PowerShell**  
+## **Step 6 – Automate Bulk User Creation with PowerShell**  
 - Wrote a **PowerShell script** (`create-users.ps1`) to generate thousands of test users with randomized names in `_EMPLOYEES`.  
 
 ```powershell
@@ -226,7 +226,7 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 
 # Part 2 – Enabling, Unlocking Accounts & Resetting Passwords  
 
-### **Step 1 – Configure Remote Desktop for Domain Users**  
+## **Step 1 – Configure Remote Desktop for Domain Users**  
 - Enabled RDP on **Client-1**.  
 - Allowed **Domain Users** to log in.
 - Attempt to log into Client-1 with one of the accounts
@@ -240,7 +240,7 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 
 ---
 
-### **Step 2 – Disable and Enable Accounts**
+## **Step 2 – Disable and Enable Accounts**
 
 In this step, I simulated disabling and re-enabling a user account in Active Directory.
 
@@ -261,7 +261,7 @@ In this step, I simulated disabling and re-enabling a user account in Active Dir
 
 
 ---
-### **Step 3 – Configure Account Lockout Policy**  
+## **Step 3 – Configure Account Lockout Policy**  
 - 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit) - Used **Group Policy Management Console (gpmc.msc)**.  
 - Edited **Default Domain Policy → Account Lockout Policy**.  
 - Applied:  
@@ -275,7 +275,7 @@ In this step, I simulated disabling and re-enabling a user account in Active Dir
 <img width="1244" height="697" alt="forcing policy" src="https://github.com/user-attachments/assets/c684b7c1-0dae-4f03-b594-b7a23b751f15" />
 
 
-### **Step 4 – Simulate Account Lockouts**  
+## **Step 4 – Simulate Account Lockouts**  
 
 To simulate an account lockout:  
 
@@ -297,7 +297,7 @@ To simulate an account lockout:
 ---
 
 
-### **Step 5 – Reset Passwords**  
+## **Step 5 – Reset Passwords**  
 - Reset password of a locked account in ADUC.  
 - Selected **“Unlock account”** during reset.  
 - Successfully logged in with the new password.  
@@ -309,7 +309,7 @@ To simulate an account lockout:
 
 
 
-## 📊 Results & Observations  
+### 📊 Results & Observations  
 - **Disabled accounts** block logins instantly.  
 - **Account lockouts** are logged in Event Viewer with detailed audit trails.  
 - **Unlocking and resetting passwords** restore access without recreating accounts.  
@@ -317,7 +317,7 @@ To simulate an account lockout:
 
 ---
 
-## 🤔 What I Learned  
+### 🤔 What I Learned  
 - How to fully deploy Active Directory in a lab setting.  
 - How to manage accounts: enable, disable, unlock, and reset passwords.  
 - How to detect and troubleshoot login failures with Event Viewer.  
