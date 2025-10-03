@@ -105,7 +105,13 @@ Once Client-1 is created:
 ---
 
 ### **Step 2 – Install Active Directory Domain Services (AD DS)**  
-- Installed **AD DS** on DC-1.  
+- Installed **AD DS** on DC-1.
+  <img width="1512" height="1008" alt="dc-1(add roles and features)" src="https://github.com/user-attachments/assets/eb79881d-44a5-4b32-85f2-2016f1f57ce3" />
+  <img width="1059" height="773" alt="dc-1(add roles and features)2" src="https://github.com/user-attachments/assets/5c862e42-dcdd-46dd-bb6d-cfd79b841574" />
+  <img width="1010" height="718" alt="dc-1(add roles and features)3" src="https://github.com/user-attachments/assets/b522ccee-bbab-457e-9c4c-e35ea3c6372e" />
+  <img width="1071" height="724" alt="dc-1(add roles and features)4" src="https://github.com/user-attachments/assets/8d53c83d-3203-42d0-bb52-1d325cf69c69" />
+
+
 - Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
 <img width="1323" height="642" alt="dc-1 promote" src="https://github.com/user-attachments/assets/e11c3317-6629-4768-a455-1ea6c5a9ce4f" />
 <img width="1050" height="796" alt="dc-1 promote2" src="https://github.com/user-attachments/assets/2d401cdd-1476-48d1-8647-1eed16d6003f" />
