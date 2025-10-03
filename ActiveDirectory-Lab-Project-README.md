@@ -171,8 +171,9 @@ Once Client-1 is created:
 - Wrote a **PowerShell script** (`create-users.ps1`) to generate thousands of test users with randomized names in `_EMPLOYEES`.  
 
 ```powershell
-$PASSWORD_FOR_USERS = "Password1"
+$PASSWORD_FOR_USERS   = "Password1"
 $NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
+# ------------------------------------------------------ #
 
 Function generate-random-name() {
     $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
@@ -182,19 +183,38 @@ Function generate-random-name() {
     $name = ""
 
     while ($count -lt $nameLength) {
-        if (($count % 2) -eq 0) {
-            $name += $consonants[(Get-Random -Minimum 0 -Maximum $($consonants.Count))]
-        } else {
-            $name += $vowels[(Get-Random -Minimum 0 -Maximum $($vowels.Count))]
+        if ($($count % 2) -eq 0) {
+            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
+        }
+        else {
+            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
         }
         $count++
     }
+
     return $name
+
 }
 
-for ($i=0; $i -lt $NUMBER_OF_ACCOUNTS_TO_CREATE; $i++) {
-    $username = (generate-random-name()) + "." + (generate-random-name())
-    Write-Output "Creating user: $username"
+$count = 1
+while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
+    $fisrtName = generate-random-name
+    $lastName = generate-random-name
+    $username = $fisrtName + '.' + $lastName
+    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $firstName `
+               -Surname $lastName `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+    $count++
 }
 ```
 
