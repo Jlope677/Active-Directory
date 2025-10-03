@@ -119,24 +119,9 @@ Once Client-1 is created:
 <img width="989" height="758" alt="dc-1 promote4" src="https://github.com/user-attachments/assets/efb816eb-f724-475b-8e71-a75ed24fd4ee" />
 <img width="589" height="614" alt="login in to domain controller dc-1" src="https://github.com/user-attachments/assets/0b686fdf-1a09-4a54-9937-e2c0c973ccb4" />
 
-
-
-
-
 ---
 
-### **Step 3 – Join Client-1 to the Domain**  
-- Logged into Client-1 → updated system settings → joined to domain `mydomain.com`.
-<img width="1275" height="1000" alt="clint-1 to domaincontroller1" src="https://github.com/user-attachments/assets/edd3fa14-e9c0-4b60-9758-fa865a57329d" />
-<img width="777" height="627" alt="clint-1 to domaincontroller2" src="https://github.com/user-attachments/assets/c53c55e4-c270-433f-99e5-8401ef9568d6" />
-<img width="1286" height="734" alt="clint-1 to domaincontroller3" src="https://github.com/user-attachments/assets/75a54e14-779a-48a3-a6cc-2e59164148fb" />    
-- Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
-<img width="1190" height="916" alt="verify Client-1 shows up in ADUC" src="https://github.com/user-attachments/assets/93fa9b43-9e7f-4021-b0b7-c57fece916ea" />
-
-
----
-
-### **Step 4 – Create Organizational Units (OUs)**  
+### **Step 3 – Create Organizational Units (OUs)**  
 - Created OUs: `_ADMINS`, `_CLIENTS`, `_EMPLOYEES`.  
 - These OUs help organize domain objects logically.  
 <img width="1363" height="954" alt="active_directory1" src="https://github.com/user-attachments/assets/78fdcda9-a3bd-4f56-b705-5e7559638b09" />
@@ -148,12 +133,37 @@ Once Client-1 is created:
 
 ---
 
-### **Step 5 – Create a Domain Admin Account**  
+### **Step 4 – Create a Domain Admin Account**  
 - Created `jane_admin` inside `_ADMINS`.  
 - Added to **Domain Admins** group.  
 - Verified login with domain admin credentials.  
+<img width="1101" height="867" alt="jane_admin1" src="https://github.com/user-attachments/assets/916fd85f-8b29-4c63-959c-c42f21c86c24" />
+<img width="1022" height="765" alt="jane_admin2" src="https://github.com/user-attachments/assets/ec6c3fce-0931-447d-ae0a-7dd118347d74" />
+<img width="927" height="640" alt="jane_admin3" src="https://github.com/user-attachments/assets/08bf1905-ed27-4bc9-8477-efc7379696d0" />
+<img width="613" height="530" alt="jane_admin4" src="https://github.com/user-attachments/assets/9d368035-1fc1-4e42-8336-e1f0f7bd4fcf" />
+<img width="990" height="719" alt="jane_admin5" src="https://github.com/user-attachments/assets/f1401389-be38-43e3-b5f1-3e8a2067a285" />
+<img width="1143" height="758" alt="jane_admin6" src="https://github.com/user-attachments/assets/6d637d6e-b001-45a5-99f3-58b78a0fc80c" />
+<img width="577" height="687" alt="jane_admin7" src="https://github.com/user-attachments/assets/8207f0eb-a0ae-4487-bb11-bf631c745731" />
+<img width="606" height="623" alt="login into jane_admin" src="https://github.com/user-attachments/assets/47989bf4-7eff-4d06-812d-ef300b2e778e" />
 
-📸 *Screenshot: jane_admin account creation + RDP login test*  
+
+
+
+
+
+
+ 
+
+---
+### **Step 5 – Join Client-1 to the Domain**  
+- Logged into Client-1 → updated system settings → joined to domain `mydomain.com`.
+<img width="1275" height="1000" alt="clint-1 to domaincontroller1" src="https://github.com/user-attachments/assets/edd3fa14-e9c0-4b60-9758-fa865a57329d" />
+<img width="777" height="627" alt="clint-1 to domaincontroller2" src="https://github.com/user-attachments/assets/c53c55e4-c270-433f-99e5-8401ef9568d6" />
+<img width="1286" height="734" alt="clint-1 to domaincontroller3" src="https://github.com/user-attachments/assets/75a54e14-779a-48a3-a6cc-2e59164148fb" />    
+- Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
+<img width="1190" height="916" alt="verify Client-1 shows up in ADUC" src="https://github.com/user-attachments/assets/93fa9b43-9e7f-4021-b0b7-c57fece916ea" />
+-drag client-1 into `_CLIENTS`
+<img width="1024" height="717" alt="drag Client-1" src="https://github.com/user-attachments/assets/5e76ad2d-887c-4302-8d24-d20a66f95575" />
 
 ---
 
