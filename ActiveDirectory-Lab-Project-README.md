@@ -160,7 +160,7 @@ Once Client-1 is created:
 <img width="1275" height="1000" alt="clint-1 to domaincontroller1" src="https://github.com/user-attachments/assets/edd3fa14-e9c0-4b60-9758-fa865a57329d" />
 <img width="777" height="627" alt="clint-1 to domaincontroller2" src="https://github.com/user-attachments/assets/c53c55e4-c270-433f-99e5-8401ef9568d6" />
 <img width="1286" height="734" alt="clint-1 to domaincontroller3" src="https://github.com/user-attachments/assets/75a54e14-779a-48a3-a6cc-2e59164148fb" />    
-### Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
+### **Verified in **Active Directory Users and Computers (ADUC)** that Client-1 appeared under **Computers**.
 <img width="1190" height="916" alt="verify Client-1 shows up in ADUC" src="https://github.com/user-attachments/assets/93fa9b43-9e7f-4021-b0b7-c57fece916ea" />
 ### drag client-1 into `_CLIENTS`
 <img width="1024" height="717" alt="drag Client-1" src="https://github.com/user-attachments/assets/5e76ad2d-887c-4302-8d24-d20a66f95575" />
