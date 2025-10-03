@@ -218,7 +218,9 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 }
 ```
 
-📸 *Screenshots: PowerShell script + ADUC populated with thousands of new users*  
+<img width="1700" height="838" alt="script1" src="https://github.com/user-attachments/assets/fbe4e4cb-e358-48a1-b5a8-e5a7e4b693cf" />
+<img width="1145" height="480" alt="script2" src="https://github.com/user-attachments/assets/727160c6-7dcc-41db-b4f5-d17fdb94fd32" />
+<img width="1819" height="943" alt="results of script" src="https://github.com/user-attachments/assets/cd224e97-e27c-4cb6-93d5-5ce0fd6922a1" />
 
 ---
 
@@ -226,37 +228,63 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 
 ### **Step 1 – Configure Remote Desktop for Domain Users**  
 - Enabled RDP on **Client-1**.  
-- Allowed **Domain Users** to log in.  
+- Allowed **Domain Users** to log in.
+- Attempt to log into Client-1 with one of the accounts
 
-📸 *Screenshots: Remote Desktop settings + adding Domain Users group*  
+<img width="948" height="910" alt="Remote Desktop" src="https://github.com/user-attachments/assets/d03955a9-298d-4940-bf95-16f55f8e8d3a" />
+<img width="905" height="896" alt="Remote Desktop2" src="https://github.com/user-attachments/assets/548682a0-e7b4-4c9d-ab3e-ad7a818fcbe5" />
+<img width="1189" height="721" alt="Remote Desktop3" src="https://github.com/user-attachments/assets/48b0d308-5078-4aed-996e-8b59da5ec972" />
+<img width="557" height="617" alt="attempt to log into Client-1 with one of the accounts" src="https://github.com/user-attachments/assets/cd11e02e-0b5c-4331-94ca-c131c8c4ba93" />
+<img width="824" height="691" alt="attempt to log into Client-1 with one of the accounts2" src="https://github.com/user-attachments/assets/4d3ef683-fdd8-40d3-9309-fbeca497cfb2" />
 
----
-
-### **Step 2 – Disable and Enable Accounts**  
-- Disabled a user account (`gef.hoc`).  
-- Attempted login via RDP (got **“Account disabled”** error).  
-- Re-enabled the account and confirmed successful login.  
-
-📸 *Screenshots: Disable → Error → Enable → Login restored*  
 
 ---
 
-### **Step 3 – Simulate Account Lockouts**  
-- Entered wrong passwords multiple times.  
-- Triggered **account lockout**.  
-- Verified events in **Event Viewer → Security Logs (Event ID 4625: Failed Logon)**.  
+### **Step 2 – Disable and Enable Accounts**
 
-📸 *Screenshots: Lockout messages + Event Viewer logs*  
+In this step, I simulated disabling and re-enabling a user account in Active Directory.
+
+- Disabled the user account **`gef.hoc`**.  
+- Attempted to log in via RDP → received **“Account disabled”** error.  
+- Re-enabled the account in **Active Directory Users and Computers (ADUC)**.  
+- Confirmed login was restored and the user was able to access again.  
+
+**Screenshots of the Process:**
+
+| Action | Screenshot |
+|--------|------------|
+| Disable the account in ADUC | <img width="1033" height="766" alt="disable account" src="https://github.com/user-attachments/assets/0f4b1e41-7479-4efe-bc45-31d0d4c92723" /> |
+| Confirmation of disabled account | <img width="1083" height="701" alt="disable account2" src="https://github.com/user-attachments/assets/20581854-23b0-41e9-849c-db7e6b452af9" /> |
+| RDP login attempt → **Account disabled error** | <img width="772" height="492" alt="disable account3" src="https://github.com/user-attachments/assets/9a07f82c-6804-43f4-99b0-8f977953472c" /> |
+| Re-enabled account in ADUC | <img width="1069" height="821" alt="enable account" src="https://github.com/user-attachments/assets/2faa6974-96f0-4bd7-9a20-58bf0eb136d9" /> |
+| Successful login after re-enabling | <img width="671" height="633" alt="try logging in again" src="https://github.com/user-attachments/assets/2e7840aa-2cea-40e8-8a20-eb247369f688" /> |
+
+
+---
+### **Step 3 – Configure Account Lockout Policy**  
+- - 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit)  
+- Used **Group Policy Management Console (gpmc.msc)**.  
+- Edited **Default Domain Policy → Account Lockout Policy**.  
+- Applied:  
+  - Account lockout threshold: **5 attempts**  
+  - Lockout duration: **30 minutes**  
+  - Reset counter after: **10 minutes**  
+
+📸 *Screenshots: GPMC settings + gpupdate /force in PowerShell*  
+
+### **Step 4 – Simulate Account Lockouts**  
+
+To simulate an account lockout:  
+
+- Entered the wrong password multiple times.  
+- Triggered an **account lockout**.  
+- Verified the lockout event in **Event Viewer → Security Logs**:  
+  - **Event ID 4625** → Failed Logon  
+  - **Event ID 4740** → Account Locked Out  
+ 
 
 ---
 
-### **Step 4 – Unlock a Locked-Out Account**  
-- Used **ADUC Properties** to unlock the account.  
-- Confirmed login restored.  
-
-📸 *Screenshots: Unlock checkbox in ADUC + Apply*  
-
----
 
 ### **Step 5 – Reset Passwords**  
 - Reset password of a locked account in ADUC.  
@@ -267,17 +295,7 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 
 ---
 
-### **Step 6 – Configure Account Lockout Policy**  
-- Used **Group Policy Management Console (gpmc.msc)**.  
-- Edited **Default Domain Policy → Account Lockout Policy**.  
-- Applied:  
-  - Account lockout threshold: **5 attempts**  
-  - Lockout duration: **30 minutes**  
-  - Reset counter after: **10 minutes**  
 
-📸 *Screenshots: GPMC settings + gpupdate /force in PowerShell*  
-
----
 
 ## 📊 Results & Observations  
 - **Disabled accounts** block logins instantly.  
