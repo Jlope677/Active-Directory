@@ -51,11 +51,10 @@ The lab covers:
 ![DC-1 Setup 3](https://github.com/user-attachments/assets/ef2e1745-3ce9-4e5c-9579-19c5d7bc2c88) 
 ![DC-1 Setup 4](https://github.com/user-attachments/assets/1320a6df-810c-4cad-ab58-4fa1200fecca) 
 
-### ** Configure Domain Controller’s NIC Private IP (Set to Static)**
+### **Configure Domain Controller’s NIC Private IP (Set to Static)**
 
 To ensure stability in the environment, the Domain Controller’s private IP address must be set to **static**.  
 
-**Screenshots of NIC Settings:**
 
 | Step | Screenshot |
 |------|------------|
