@@ -63,6 +63,58 @@ To ensure stability in the environment, the Domain Controller’s private IP add
 | Open NIC Settings | <img width="1904" height="772" alt="dc-1 nic(1)" src="https://github.com/user-attachments/assets/ae15ad6f-48b8-4653-8d0a-ed61485b1a22" /> |
 | Configure Static IP | <img width="1601" height="752" alt="dc-1 nic(2)" src="https://github.com/user-attachments/assets/94ee9222-9556-4ef8-bf91-e401b1d0961e" /> |
 
+### **Log into DC-1 and Disable Windows Firewall (for testing connectivity)**
+
+> ⚠️ *This is only for testing purposes in the lab. In a production environment, firewall rules should be properly configured instead of disabling the firewall.*
+
+
+<img width="505" height="305" alt="dc-1 firewall(1)" src="https://github.com/user-attachments/assets/d2cef197-133e-473e-a9b9-bb890b359dcd" />  
+<img width="729" height="568" alt="dc-1 firewall(2)" src="https://github.com/user-attachments/assets/f5746cd0-0165-448f-be2b-86d154d60da8" />  
+<img width="510" height="579" alt="dc-1 firewall(3)" src="https://github.com/user-attachments/assets/8933ebd7-c96f-4678-8fb8-4d9b5e6bf73a" />  
+<img width="537" height="596" alt="dc-1 firewall(4)" src="https://github.com/user-attachments/assets/6d6a0d32-bafc-40a7-b468-995f7082ef86" />  
+<img width="525" height="600" alt="dc-1 firewall(5)" src="https://github.com/user-attachments/assets/56af524c-0b19-48f0-8518-e8288abe4a0b" />  
+
+---
+
+### **Create the Client VM (Windows 10) – `Client-1`**
+
+- **VM Name:** `Client-1`  
+- **Operating System:** Windows 10  
+- **Username:** `labuser`  
+- **Password:** `Cyberlab123!`  
+
+
+<img width="1184" height="714" alt="Client-1(1)" src="https://github.com/user-attachments/assets/b07ce59a-f49d-4899-a42f-d1d1f2bf915c" />  
+<img width="1231" height="591" alt="Client-1(2)" src="https://github.com/user-attachments/assets/1ea982cf-dc28-4b4a-b1bc-b54d7e5df518" />  
+<img width="1263" height="774" alt="Client-1(3)" src="https://github.com/user-attachments/assets/a9a229a1-db20-4936-ad22-cbf1c516633d" />  
+<img width="1212" height="833" alt="Client-1(4)" src="https://github.com/user-attachments/assets/0d222a70-0296-4e0b-a963-357742910911" />  
+
+---
+
+### ** Configure Client-1’s DNS Settings to Use DC-1’s Private IP**
+
+Once Client-1 is created:  
+1. Set its **DNS server** to DC-1’s **private IP**.  
+2. Restart the VM.  
+3. Ping DC-1’s private IP to confirm connectivity.  
+4. Run `ipconfig /all` to verify that DC-1 is listed as the DNS server.  
+
+
+<img width="1902" height="891" alt="client-1 dns(1)" src="https://github.com/user-attachments/assets/375e3451-5c3d-426d-a63f-11112ab40761" />  
+<img width="1343" height="786" alt="client-1 dns(2)" src="https://github.com/user-attachments/assets/16be22fa-cb79-4fda-b34f-b60553a6fb71" />  
+<img width="1581" height="615" alt="restart client-1" src="https://github.com/user-attachments/assets/2f861a03-27b7-4b8c-9cc7-2ef8cc7abe25" />  
+<img width="1030" height="958" alt="ping dc-1 private ip" src="https://github.com/user-attachments/assets/6301adc4-6ae6-4434-85a5-2dbf3d37a85d" />  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
