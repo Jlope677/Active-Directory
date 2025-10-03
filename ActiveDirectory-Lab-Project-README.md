@@ -282,8 +282,7 @@ To simulate an account lockout:
 - Entered the wrong password multiple times.  
 - Triggered an **account lockout**.  
 - Verified the lockout event in **Event Viewer → Security Logs**:  
-  - **Event ID 4625** → Failed Logon  
-  - **Event ID 4740** → Account Locked Out  
+ 
 <img width="628" height="544" alt="effects of putting a bad password" src="https://github.com/user-attachments/assets/ffc6059a-4670-437b-ab81-521013fe8c33" />
 <img width="758" height="656" alt="failed password results" src="https://github.com/user-attachments/assets/ab711591-0189-4144-89d1-e792c0416028" />
 <img width="1087" height="752" alt="failed password results2" src="https://github.com/user-attachments/assets/673c534e-6621-4d1b-98fb-c7d0abf9e4d7" />
