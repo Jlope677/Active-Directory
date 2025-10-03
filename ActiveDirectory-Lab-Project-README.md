@@ -88,7 +88,7 @@ To ensure stability in the environment, the Domain Controller’s private IP add
 <img width="1212" height="833" alt="Client-1(4)" src="https://github.com/user-attachments/assets/0d222a70-0296-4e0b-a963-357742910911" />  
 
 
-### ** Configure Client-1’s DNS Settings to Use DC-1’s Private IP**
+### **Configure Client-1’s DNS Settings to Use DC-1’s Private IP**
 
 Once Client-1 is created:  
 1. Set its **DNS server** to DC-1’s **private IP**.  
