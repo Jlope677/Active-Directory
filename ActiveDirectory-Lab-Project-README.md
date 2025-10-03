@@ -262,15 +262,18 @@ In this step, I simulated disabling and re-enabling a user account in Active Dir
 
 ---
 ### **Step 3 – Configure Account Lockout Policy**  
-- - 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit)  
-- Used **Group Policy Management Console (gpmc.msc)**.  
+- 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit) - Used **Group Policy Management Console (gpmc.msc)**.  
 - Edited **Default Domain Policy → Account Lockout Policy**.  
 - Applied:  
   - Account lockout threshold: **5 attempts**  
   - Lockout duration: **30 minutes**  
   - Reset counter after: **10 minutes**  
+<img width="657" height="412" alt="grouppolicy1" src="https://github.com/user-attachments/assets/3f5d7ad7-c867-4ab0-943d-ae2cbdc7b5c9" />
+<img width="973" height="709" alt="grouppolicy2" src="https://github.com/user-attachments/assets/017c1b0f-818e-48e0-9009-2d66d365aaa2" />
+<img width="1654" height="832" alt="grouppolicy3" src="https://github.com/user-attachments/assets/bea019aa-ba18-44f8-91c4-72ee0210c75a" />
+<img width="1225" height="747" alt="grouppolicy4" src="https://github.com/user-attachments/assets/4cd53a4c-1fcc-4865-8023-dfef81642528" />
+<img width="1244" height="697" alt="forcing policy" src="https://github.com/user-attachments/assets/c684b7c1-0dae-4f03-b594-b7a23b751f15" />
 
-📸 *Screenshots: GPMC settings + gpupdate /force in PowerShell*  
 
 ### **Step 4 – Simulate Account Lockouts**  
 
@@ -281,6 +284,15 @@ To simulate an account lockout:
 - Verified the lockout event in **Event Viewer → Security Logs**:  
   - **Event ID 4625** → Failed Logon  
   - **Event ID 4740** → Account Locked Out  
+<img width="628" height="544" alt="effects of putting a bad password" src="https://github.com/user-attachments/assets/ffc6059a-4670-437b-ab81-521013fe8c33" />
+<img width="758" height="656" alt="failed password results" src="https://github.com/user-attachments/assets/ab711591-0189-4144-89d1-e792c0416028" />
+<img width="1087" height="752" alt="failed password results2" src="https://github.com/user-attachments/assets/673c534e-6621-4d1b-98fb-c7d0abf9e4d7" />
+<img width="1578" height="674" alt="event viewer in dc-1" src="https://github.com/user-attachments/assets/bd390f45-25fe-4de7-9e7e-9aa04a4b4ee7" />
+<img width="1061" height="861" alt="evenviewer client-1" src="https://github.com/user-attachments/assets/b02b4286-41c6-475a-98f3-133dd691e45e" />
+<img width="764" height="903" alt="evenviewer client-1(2)" src="https://github.com/user-attachments/assets/af609fb5-0121-400f-a216-629c5c6caeeb" />
+<img width="1572" height="971" alt="evenviewer client-1(3)" src="https://github.com/user-attachments/assets/84ac6430-ada1-4bf7-b874-20ae6dde7da9" />
+<img width="1015" height="794" alt="unlock account" src="https://github.com/user-attachments/assets/e5561ff2-90e3-415e-a991-2313c30bd90c" />
+
  
 
 ---
@@ -290,8 +302,9 @@ To simulate an account lockout:
 - Reset password of a locked account in ADUC.  
 - Selected **“Unlock account”** during reset.  
 - Successfully logged in with the new password.  
+<img width="1023" height="697" alt="resetpassword" src="https://github.com/user-attachments/assets/e51901cc-bdd0-4ae4-98bd-6e5bc53be2bb" />
+<img width="1075" height="772" alt="resetpassword2" src="https://github.com/user-attachments/assets/1ca561bc-24e4-4f3c-b452-76a504b49f10" />
 
-📸 *Screenshots: Reset password + Successful login*  
 
 ---
 
