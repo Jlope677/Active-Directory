@@ -107,10 +107,10 @@ Once Client-1 is created:
 ### **Step 2 – Install Active Directory Domain Services (AD DS)**  
 - Installed **AD DS** on DC-1.  
 - Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
-<img width="1363" height="954" alt="active_directory1" src="https://github.com/user-attachments/assets/ffabe006-84b1-4c6f-8098-74838e898b50" />
-<img width="1309" height="969" alt="active_directory2" src="https://github.com/user-attachments/assets/13796227-2fec-4ae7-b772-5ca436be9fc0" />
-<img width="627" height="530" alt="active_directory3" src="https://github.com/user-attachments/assets/1a7586d1-c2ad-4ad0-a72f-068718a80e12" />
-<img width="1022" height="711" alt="active_directory4" src="https://github.com/user-attachments/assets/dedd5743-3e69-4510-82e1-7802c8c96aea" />
+<img width="1323" height="642" alt="dc-1 promote" src="https://github.com/user-attachments/assets/e11c3317-6629-4768-a455-1ea6c5a9ce4f" />
+<img width="1050" height="796" alt="dc-1 promote2" src="https://github.com/user-attachments/assets/2d401cdd-1476-48d1-8647-1eed16d6003f" />
+<img width="997" height="767" alt="dc-1 promote3(Password1)" src="https://github.com/user-attachments/assets/ef5ecaa5-322a-4f14-85bd-0de6c1260a5d" />
+<img width="989" height="758" alt="dc-1 promote4" src="https://github.com/user-attachments/assets/efb816eb-f724-475b-8e71-a75ed24fd4ee" />
 
 
 
