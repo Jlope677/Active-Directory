@@ -102,35 +102,20 @@ Once Client-1 is created:
 <img width="1581" height="615" alt="restart client-1" src="https://github.com/user-attachments/assets/2f861a03-27b7-4b8c-9cc7-2ef8cc7abe25" />  
 <img width="1030" height="958" alt="ping dc-1 private ip" src="https://github.com/user-attachments/assets/6301adc4-6ae6-4434-85a5-2dbf3d37a85d" />  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 ---
 
 ### **Step 2 – Install Active Directory Domain Services (AD DS)**  
 - Installed **AD DS** on DC-1.  
 - Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
+<img width="589" height="614" alt="login in to domain controller dc-1" src="https://github.com/user-attachments/assets/bfdf70d2-8b00-4093-8510-abb3092b169c" />
+<img width="1363" height="954" alt="active_directory1" src="https://github.com/user-attachments/assets/ffabe006-84b1-4c6f-8098-74838e898b50" />
+<img width="1309" height="969" alt="active_directory2" src="https://github.com/user-attachments/assets/13796227-2fec-4ae7-b772-5ca436be9fc0" />
+<img width="627" height="530" alt="active_directory3" src="https://github.com/user-attachments/assets/1a7586d1-c2ad-4ad0-a72f-068718a80e12" />
+<img width="1022" height="711" alt="active_directory4" src="https://github.com/user-attachments/assets/dedd5743-3e69-4510-82e1-7802c8c96aea" />
 
-📸 *Screenshots: Installing AD DS & domain setup wizard*  
+
+
+
 
 ---
 
