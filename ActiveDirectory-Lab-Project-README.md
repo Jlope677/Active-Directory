@@ -282,7 +282,9 @@ In this step, I simulated disabling and re-enabling a user account in Active Dir
 
 ---
 ## **Step 3 – Configure Account Lockout Policy**  
-- 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit) - Used **Group Policy Management Console (gpmc.msc)**.  
+- 📖 [Reference: How To Configure Account Lockout Threshold in Group Policy](https://docs.google.com/document/d/1msUMWaPDMR1hPYxzGOlgN4KpUjnyyYEv3vvOQXkSpLQ/edit)
+
+- Used **Group Policy Management Console (gpmc.msc)**.  
 - Edited **Default Domain Policy → Account Lockout Policy**.  
 - Applied:  
   - Account lockout threshold: **5 attempts**  
