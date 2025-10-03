@@ -107,7 +107,6 @@ Once Client-1 is created:
 ### **Step 2 – Install Active Directory Domain Services (AD DS)**  
 - Installed **AD DS** on DC-1.  
 - Promoted server to a **Domain Controller** for domain: `mydomain.com`.  
-<img width="589" height="614" alt="login in to domain controller dc-1" src="https://github.com/user-attachments/assets/bfdf70d2-8b00-4093-8510-abb3092b169c" />
 <img width="1363" height="954" alt="active_directory1" src="https://github.com/user-attachments/assets/ffabe006-84b1-4c6f-8098-74838e898b50" />
 <img width="1309" height="969" alt="active_directory2" src="https://github.com/user-attachments/assets/13796227-2fec-4ae7-b772-5ca436be9fc0" />
 <img width="627" height="530" alt="active_directory3" src="https://github.com/user-attachments/assets/1a7586d1-c2ad-4ad0-a72f-068718a80e12" />
